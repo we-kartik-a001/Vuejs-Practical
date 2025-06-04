@@ -5,6 +5,8 @@ import TemplateRef from './Pages/TemplateRef.vue'
 import Child from './Pages/Child.vue'
 import Parent from './Pages/Parent.vue'
 import PropsValidation from './Pages/PropsValidation.vue'
+import Post from './Pages/Post.vue'
+import SinglePost from './Pages/SinglePost.vue'
 
 
 const routes = [
@@ -13,6 +15,8 @@ const routes = [
   { path: '/child', component: Child },
   { path: '/parent', component: Parent },
   { path: '/props_validation', component: PropsValidation },
+  { path: '/post', component: Post },
+  { path: '/single_post ', component: SinglePost },
 ]
 
 const router = createRouter({
