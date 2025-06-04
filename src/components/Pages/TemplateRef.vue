@@ -2,22 +2,23 @@
 import { computed } from 'vue';
 
 {/* <template-ref v-bind="prop_data" />  */}
-// const props = defineProps({
-//   title: String,
-// });
-
-
 const props = defineProps({
-  prop_data : Object
+  title: String, 
+  id:Number
 });
 
-props.prop_data.title =  "hi web dever";// this will aso change the parent props value
+// making the object as props
+// const props = defineProps({
+//   prop_data : Object,
+// });
 
-// access key of the props object
-const trimtitle = computed(()=> props.prop_data.title.trim().toUpperCase());
+// props.prop_data.title =  "hi web dever";// this will aso change the parent props value
 
 // const name = computed(()=> props.title.trim().toLowerCase());
 // console.log(name.value);
+
+// access key of the props object
+// const trimtitle = computed(()=> props.prop_data.title.trim().toUpperCase());
 
 </script>
 
@@ -26,12 +27,19 @@ const trimtitle = computed(()=> props.prop_data.title.trim().toUpperCase());
    <div class="border border-2 rounded-lg w-2/5">
      <p class="font-semibold text-blue-600" >Template Ref</p>
     <p>Single Post Component</p>
-    <p >
+
+    <!-- if we are passing the props as an object in the child component -->
+    <!-- <p >
       {{ props.prop_data.title }}
     </p>
     <p class="font-semibold text-red-600">Globally Declared</p>
     <p class="text-red-600">{{ props.prop_data?.name }}</p>
-    {{ trimtitle }}
+    <p class="text-red-600">{{ props.prop_data?.id }}</p> -->
+
+
+    <!-- {{ trimtitle }} -->
+
+    <p>{{id }}</p>
    </div>
   </div>
 </template>

@@ -12,7 +12,7 @@
         <p class="font-bold text-blue-600">Parent Component</p>
 
         <!-- Child Component used  -->
-        <Child  :name="parentMessage" />
+        <Child :name="parentMessage" :childprops="childprops"/>
         <button
           class="border p-1 bg-gray-200 rounded-md"
           @click="childfunction"
@@ -55,4 +55,8 @@ const childfunction = () => {
 const texttaker = ref("");
 
 const parentMessage = 'Hello from Parent!'
+
+const childprops = ref({
+  title:'Parent props'
+})
 </script>
