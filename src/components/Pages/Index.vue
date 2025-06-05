@@ -1,6 +1,9 @@
 <script setup>
 import { ref } from "vue";
 import Post from "./Post.vue";
+import CustomInput from "./CustomInput.vue";
+
+const searchtext = ref('Hi this web dev from the office');
 
 const header = ref(null);
 
@@ -95,6 +98,15 @@ const datalogger = () => {
 
       <div>
         <Post/>
+      </div>
+
+      <div>
+        <CustomInput v-model="searchtext" />
+
+        <!-- <CustomInput :searchtext="searchtext" @updateText="searchtext= $event" /> -->
+        <div>
+          Parent: {{ searchtext }}
+        </div>
       </div>
     </div>
   </div>

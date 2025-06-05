@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import PropsValidation from "./components/Pages/PropsValidation.vue";
+import SlotComponent from "./components/Pages/slotComponent.vue";
 
 const prop_data = {
   title: "Kartik web dev",
@@ -54,7 +55,8 @@ const updateLinker = () => {
 
     <!-- In this component we dont have send any data -->
     <!-- <prop_data  /> -->
-
+     <SlotComponent>click here</SlotComponent>
+     <SlotComponent></SlotComponent>
     <router-view></router-view>
   </div>
 </template>

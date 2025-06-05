@@ -6,7 +6,14 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(['edit-post']);
+const emit = defineEmits({
+  editPost(postId){
+    if(postId && typeof postId === 'number'){
+      return true;
+    }
+    return false;
+  }
+});
 </script>
 
 <template>
@@ -15,13 +22,12 @@ const emit = defineEmits(['edit-post']);
       <h1>SinglePost</h1>
       <p>id: {{ poster.id }}</p>
       <p>title: {{ poster.title }}</p>
-
       <button
         class="border p-2 rounded-xl bg-blue-400"
-        @click.prevent="emit('edit-post', poster.id)"
+        @click.prevent="emit('editPost', props.poster.id)"
       >
         Click
       </button>
     </div>
-  </div>
+  </div> 
 </template>
