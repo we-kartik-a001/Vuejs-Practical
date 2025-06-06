@@ -55,8 +55,16 @@ const updateLinker = () => {
 
     <!-- In this component we dont have send any data -->
     <!-- <prop_data  /> -->
-     <SlotComponent>click here</SlotComponent>
-     <SlotComponent></SlotComponent>
+     <!-- <SlotComponent>click here</SlotComponent>
+     <SlotComponent></SlotComponent> -->
+
+     <SlotComponent >click here</SlotComponent>
+
+     <SlotComponent >
+      <template v-slot:cardTitle >Named slot</template>
+      <template v-slot:Parenttitle >From Parent</template>
+      <template v-slot:title="p" >{{ p.pTitle }}</template>
+     </SlotComponent>
     <router-view></router-view>
   </div>
 </template>
