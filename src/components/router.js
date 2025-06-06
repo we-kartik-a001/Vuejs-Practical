@@ -7,6 +7,9 @@ import Parent from './Pages/Parent.vue'
 import PropsValidation from './Pages/PropsValidation.vue'
 import Post from './Pages/Post.vue'
 import SinglePost from './Pages/SinglePost.vue'
+import Fetchapi from './Pages/api/Fetchapi.vue'
+import Form from './Pages/api/Form.vue'
+import AxiosForm from './Pages/api/axiosForm.vue'
 
 
 const routes = [
@@ -17,6 +20,9 @@ const routes = [
   { path: '/props_validation', component: PropsValidation },
   { path: '/post', component: Post },
   { path: '/single_post ', component: SinglePost },
+  { path: '/fetchapi', component:Fetchapi},
+  { path: '/form', component:Form},
+  { path: '/axios_form', component:AxiosForm}
 ]
 
 const router = createRouter({
